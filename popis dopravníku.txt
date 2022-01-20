@@ -1,0 +1,11 @@
+popis: Pásový dopravní neblokujícím způsobem, pomocí stavového automatu, pwm a adc převodník,realizace 
+z lega. Pomocí kontinuálního serva otáčíme pásem po které jezdí kontejner. Optická brána hlídá zda box
+dojel pod násypku. Pokud ano, pás se zastaví a začne se otevírat brána pomocí 180 stupňového serva,
+naloží se náklad, brána se zavře a pás se dá znovu do pohybu dokud nedojede další kontejner. Díky 
+neblokujícímu způsobu je možné přidávat další jiné vedlejší funkce. Perioda timeru je 20ms a servo 
+ovládáme šířkou pulzu 1-2ms. Pokud je před optickou bránou objekt(otevře se fototranzistor), pootevře se 
+tranzistor a zvýší se napětí to měříme pomocí adc převodníku. 
+
+Součástky: tcrt1000-optická brána
+	   servo kontinuální (odstaněn potencimetr=neznáme polohu ale mužeme neustále otáčet)
+	   servo 180 stupňové (můžeme ovládat jeho pozici pomocí pulzu 1-2ms pouze 180 stupňů)
